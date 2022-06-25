@@ -6,7 +6,7 @@
         <div class="h4">Acompanhando</div>
       </div>
       <div class="card-body">
-        <WatchListQuotes/>
+        <WatchListQuotes :listenQuotes="listenQuotes"/>
       </div>
     </div>
 
@@ -16,7 +16,7 @@
           todas as moedas
         </div>
         <div class="card-body">
-          <ListQuotes :quotes="quotes" />
+          <ListQuotes :quotes="quotes" :listenQuotes="listenQuotes"/>
         </div>
       </div>
     </div>
@@ -35,7 +35,8 @@ const App = defineComponent({
   setup() {
     const data = reactive({
       quotes : {},
-      test : ''   
+      test : '',
+      listenQuotes : [],   
      
     })
 

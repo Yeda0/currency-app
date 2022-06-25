@@ -26,8 +26,8 @@
                 <td>
                     <a href="#" class="btn btn-primary btn-sm tooltip tooltip-left"
                      data-tooltip="Seguir" >
-                    <i class="icons-add">
-                        
+                    <i class="icon icon-plus">
+
                     </i>
                     </a>
                 </td>
@@ -44,6 +44,10 @@ const ListQuotes = defineComponent({
         quotes : {
             type : Object,
             required : true,
+        },
+        listenQuotes : {
+            type: Array,
+            required : true
         }
     }
 });

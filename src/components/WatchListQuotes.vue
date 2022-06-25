@@ -1,5 +1,5 @@
 <template>
-    <ListQuotes :quotes="quotes"/>
+    <ListQuotes :quotes="quotes" :listenQuotes="listenQuotes"/>
     <div class="mt-2 text-right">
          <cite class="text-small">
         Atualizará novamente em  <b>{{nextUpdateTime}}</b>
@@ -14,6 +14,12 @@ import ListQuotes from './ListQuotes.vue';
 
 const WatchListQuotes = defineComponent({
     components : {ListQuotes},
+    props : {
+        listenQuotes : {
+            type : Array,
+            required : true
+        }
+    },
 
     setup() {
         const quotes = ref({});
